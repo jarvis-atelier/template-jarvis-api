@@ -1,0 +1,32 @@
+# EditorConfig — keeps indentation and line endings consistent across editors.
+# Docs: https://editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown uses trailing whitespace for hard line breaks; don't strip.
+[*.{md,mdx}]
+trim_trailing_whitespace = false
+
+# Python — PEP 8 says 4 spaces.
+[*.py]
+indent_size = 4
+
+# Go uses tabs by convention.
+[*.go]
+indent_style = tab
+
+# Makefiles REQUIRE tabs (recipes break with spaces).
+[Makefile]
+indent_style = tab
+
+# YAML is whitespace-sensitive; 2 spaces is the universal convention.
+[*.{yml,yaml}]
+indent_size = 2

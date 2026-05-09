@@ -1,0 +1,17 @@
+# CODEOWNERS — auto-assigns reviewers for PRs that touch these paths.
+#
+# Format: <pattern> <@owner1> <@owner2>
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# TEMPLATE — replace the team handles below with the actual owners of this repo.
+# Last matching pattern wins, so order from most general to most specific.
+
+# Default owners for everything in the repo.
+*       @jarvis-atelier/leads
+
+# Examples — uncomment and adapt to scope ownership by area:
+# /apps/web/    @jarvis-atelier/devs
+# /apps/api/    @jarvis-atelier/devs
+# /infra/       @jarvis-atelier/leads
+# /docs/        @jarvis-atelier/leads
+# /.github/     @jarvis-atelier/leads

@@ -1,0 +1,70 @@
+# ============================================================================
+# .gitattributes — line endings and binary detection.
+#
+# Critical for cross-platform teams (Windows + macOS + Linux). Without this,
+# Windows clones can introduce CRLF that breaks shell scripts in CI.
+# ============================================================================
+
+# Auto-detect text files and normalize them to LF inside the repo.
+* text=auto eol=lf
+
+# Force LF for files that MUST stay Unix (shell scripts, config formats).
+*.sh           text eol=lf
+*.bash         text eol=lf
+Dockerfile     text eol=lf
+*.dockerfile   text eol=lf
+Makefile       text eol=lf
+*.mk           text eol=lf
+
+# Force CRLF for Windows-only files.
+*.bat          text eol=crlf
+*.cmd          text eol=crlf
+*.ps1          text eol=crlf
+
+# ----------------------------------------------------------------------------
+# Binary types — git won't try to diff or normalize these.
+# ----------------------------------------------------------------------------
+# Images
+*.png          binary
+*.jpg          binary
+*.jpeg         binary
+*.gif          binary
+*.ico          binary
+*.webp         binary
+# SVG is XML — treat as text, not binary.
+*.svg          text
+
+# Documents
+*.pdf          binary
+
+# Archives
+*.zip          binary
+*.tar          binary
+*.tar.gz       binary
+*.tgz          binary
+*.gz           binary
+*.bz2          binary
+*.7z           binary
+*.rar          binary
+
+# Fonts
+*.woff         binary
+*.woff2        binary
+*.eot          binary
+*.ttf          binary
+*.otf          binary
+
+# Media
+*.mp3          binary
+*.mp4          binary
+*.mov          binary
+*.flv          binary
+*.avi          binary
+*.webm         binary
+*.wav          binary
+
+# Compiled
+*.so           binary
+*.dll          binary
+*.exe          binary
+*.dylib        binary

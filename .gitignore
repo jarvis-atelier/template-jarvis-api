@@ -1,0 +1,144 @@
+# ============================================================================
+# .gitignore — universal base for Jarvis Atelier projects.
+#
+# This file ships with what 99% of repos need regardless of stack.
+# Stack-specific patterns (node_modules, __pycache__, etc.) are included
+# below, partly uncommented for the common ecosystems and partly commented
+# for the others — uncomment what your stack actually uses.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Operating system
+# ----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ----------------------------------------------------------------------------
+# Editors / IDEs
+# ----------------------------------------------------------------------------
+# VSCode — keep shared workspace settings, ignore personal ones
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# Other editors
+.fleet/
+.zed/
+.history/
+.ionide/
+
+# ----------------------------------------------------------------------------
+# Environment / secrets
+# ----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+.env.test.local
+.envrc
+
+# ----------------------------------------------------------------------------
+# Logs
+# ----------------------------------------------------------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------------------------------------------------------
+# Generic build outputs
+# ----------------------------------------------------------------------------
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# ----------------------------------------------------------------------------
+# Caches
+# ----------------------------------------------------------------------------
+.cache/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+.eslintcache
+.stylelintcache
+
+# ----------------------------------------------------------------------------
+# Test coverage
+# ----------------------------------------------------------------------------
+coverage/
+.nyc_output/
+htmlcov/
+
+# ----------------------------------------------------------------------------
+# Stack-specific — Node.js (uncommented; almost every TS/JS repo needs this)
+# ----------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+.pnpm-store/
+
+# ----------------------------------------------------------------------------
+# Stack-specific — Python (uncommented; common in atelier projects)
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ----------------------------------------------------------------------------
+# Stack-specific — uncomment as needed
+# ----------------------------------------------------------------------------
+# Java / JVM:
+# target/
+# *.class
+# *.jar
+
+# Go:
+# bin/
+# vendor/
+
+# Rust:
+# target/
+# Cargo.lock   # only ignore for libraries; commit for binaries
+
+# Docker:
+# *.pid
+
+# Terraform:
+# .terraform/
+# *.tfstate
+# *.tfstate.backup
