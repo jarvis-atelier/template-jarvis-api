@@ -69,6 +69,12 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": ["**/*.(t|j)s"],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "main\\.ts$",
+      "\\.module\\.ts$",
+      "common/prisma/prisma\\.service\\.ts$"
+    ],
     "coverageDirectory": "../coverage",
     "coverageThreshold": {
       "global": {
